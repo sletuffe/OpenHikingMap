@@ -1,4 +1,4 @@
-# This is the custom osm2pgsql .style file that is customized by both the OpenTopoMap project and the maps.refuges.info (to support both maps)
+# This is the custom osm2pgsql .style file that is customized by both the OpenTopoMap project and the OpenHikingMap (to support both maps)
 #
 # A .style file has 4 columns that define how OSM objects end up in tables in
 # the database and what columns are created. It interacts with the command-line
@@ -75,14 +75,14 @@
 
 # OsmType  Tag          DataType     Flags
 
-#Used for maps.refuges.info/hiking
+#Used for OpenHikingMap
 node       mountain_pass text        linear
 node,way   ele          text         linear
 way        smoothness   text         linear
 way        trail_visibility text     linear
 node,way   shelter_type text         linear
 way        protect_class        text         linear
-#end maps.refuges.info/hiking 's tweaks
+#end OpenHikingMap's tweaks
 
 
 node,way   abandoned    text         polygon
