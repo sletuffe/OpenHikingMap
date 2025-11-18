@@ -1,7 +1,7 @@
 # OpenHikingMap
 OpenHikingMap is a mapnik 3.x+ map style using Openstreetmap data for mountain activities (mainly hiking)
 
-The official information page is here : https://wiki.openstreetmap.org/wiki/OpenHikingMap
+The official information page is here : https://wiki.openstreetmap.org/wiki/OpenHikingMap and a demo leaflet map can be seen here https://openmaps.fr/#openhikingmap
 
 Missing external files can be found :
 
