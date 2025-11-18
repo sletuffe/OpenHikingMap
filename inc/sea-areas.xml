@@ -10,7 +10,7 @@
     <StyleName>water_polygons</StyleName>
     <Datasource>
             <Parameter name="type">shape</Parameter>
-            <Parameter name="file">mapnik-data/sea-areas/detailed/water_polygons</Parameter>
+            <Parameter name="file">mapnik-data/sea-areas/world-seas-polygons/water_polygons</Parameter>
     </Datasource>
 </Layer>
 
