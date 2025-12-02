@@ -1800,9 +1800,9 @@
   </Style>
 
 &color-hillshade;
-&sea-areas;
 &areas-texture;  
 &contours;
+&sea-areas;
 &water-areas;
 
 <Layer name="minor-roads">
