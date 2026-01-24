@@ -1,0 +1,175 @@
+###############################################
+#   OpenTopoMap
+#   (c) 2012-2017 Stefan Erhardt
+#   https://github.com/der-stefan/OpenTopoMap
+#
+#   opentopomap.org
+#
+###############################################
+
+Compile saddledirection to estimate direction of saddles with DEM data
+======================================================================
+
+	sudo apt install libgdal-dev
+	cd mapnik/tools/
+	cc -o saddledirection saddledirection.c -lm -lgdal
+	
+
+Compile isolation to calculate topographic isolation of peaks
+=============================================================
+    cc -Wall -o isolation isolation.c -lgdal -lm -O2
+
+
+HOWTO preprocess a newly imported database
+==========================================
+
+	cd mapnik/tools/
+
+    psql gis < arealabel.sql 
+	screen ./update_lowzoom.sh
+	screen ./update_saddles.sh 
+    screen ./update_isolations.sh
+	psql gis < stationdirection.sql
+	psql gis < viewpointdirection.sql
+	psql gis < pitchicon.sql
+
+
+		
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+# below only tests, not necessary to execute
+#########################################################################
+SELECT sport from planet_osm_polygon WHERE ST_DWithin(way,Point,SearchArea_m)
+
+
+======================================================
+	pgsql2shp -k -f waterways gis "SELECT ST_SimplifyPreserveTopology(way,100) AS way,\"CEMT\",intermittent,motorboat,waterway,tunnel FROM planet_osm_line WHERE \"CEMT\" IN ('IV','Va','Vb','VIa','VIb','VIc','VII') OR motorboat = 'yes'"
+	ogr2ogr -explodecollections -a_srs epsg:3857 -append -f "PostgreSQL" 'PG:dbname='lowzoom'' -nln waterways waterways.shp
+	
+	pgsql2shp -k -f waterways-test gis "SELECT way FROM planet_osm_line JOIN (SELECT ltrim(member, 'w')::bigint AS osm_id FROM (SELECT unnest(members) AS member FROM planet_osm_rels WHERE ARRAY['waterway','river']<@tags) u WHERE member LIKE 'w%') x USING(osm_id)"
+	
+	SELECT way
+	FROM planet_osm_line
+	JOIN (
+		SELECT ltrim(member, 'w')::bigint AS osm_id
+		FROM (
+			SELECT unnest(members) AS member, unnest()
+			FROM planet_osm_rels
+			WHERE ARRAY['waterway','river']<@tags
+			) u
+		WHERE member ~ '^w[0-9]+') x
+	USING(osm_id);
+	
+	
+======================================================
+	pgsql2shp -k -f railways gis "SELECT ST_SimplifyPreserveTopology(way,50),railway,\"service\",tunnel FROM planet_osm_line WHERE (\"service\" IS NULL AND railway='rail')"
+
+
+======================================================
+	pgsql2shp -k -f rails-highspeed gis "SELECT way FROM planet_osm_line JOIN ( SELECT ltrim(member, 'w')::bigint AS osm_id FROM (SELECT unnest(members) AS member FROM planet_osm_rels WHERE ARRAY['route','train']<@tags AND ARRAY['service','high_speed']<@tags) u WHERE member ~ '^w[0-9]+') x USING(osm_id);"
+
+
+	SELECT way
+	FROM planet_osm_line
+	JOIN (
+		SELECT ltrim(member, 'w')::bigint AS osm_id
+		FROM (
+			SELECT unnest(members) AS member
+			FROM planet_osm_rels
+			WHERE ARRAY['route','train']<@tags AND ARRAY['service','high_speed']<@tags
+			) u
+		WHERE member ~ '^w[0-9]+') x
+	USING(osm_id);
+	
+	
+========================================================
+	pgsql2shp -k -f waterways-test gis "SELECT way FROM planet_osm_line JOIN ( WITH numbered AS( SELECT row_number() OVER() AS row, entry FROM( SELECT unnest(members) AS entry FROM planet_osm_rels WHERE ARRAY['waterway','river']<@tags) AS mylist) SELECT ltrim(a.entry,'w')::bigint AS osm_id FROM numbered AS a JOIN numbered AS b ON a.row = b.row-1 AND b.entry = 'main_stream' WHERE a.entry ~ '^w[0-9]+') x USING(osm_id);"
+	
+	
+	SELECT way FROM planet_osm_line
+	JOIN (
+			WITH numbered AS(
+				SELECT row_number() OVER() AS row, entry
+				FROM(
+					SELECT unnest(members) AS entry
+					FROM planet_osm_rels
+					WHERE ARRAY['waterway','river']<@tags) AS mylist)
+			SELECT ltrim(a.entry,'w')::bigint AS osm_id
+			FROM numbered AS a JOIN numbered AS b
+			ON a.row = b.row-1 AND b.entry = 'main_stream'
+			WHERE a.entry ~ '^w[0-9]+'
+	) x
+	USING(osm_id);
+		
+	
+========================================================
+	pgsql2shp -k -f admin_centers gis "SELECT DISTINCT name FROM planet_osm_point JOIN (WITH numbered AS(SELECT row_number() OVER() AS row, entry FROM(SELECT unnest(members) AS entry FROM planet_osm_rels WHERE ARRAY['boundary','administrative']<@tags AND ARRAY['admin_level','2']<@tags) AS mylist) SELECT ltrim(a.entry,'n')::bigint AS osm_id FROM numbered AS a JOIN numbered AS b ON a.row = b.row-1 AND b.entry = 'admin_centre') x USING(osm_id)"
+
+
+SELECT DISTINCT way,name FROM planet_osm_point
+	JOIN (
+			WITH numbered AS(
+				SELECT row_number() OVER() AS row, entry
+				FROM(
+					SELECT unnest(members) AS entry
+					FROM planet_osm_rels
+					WHERE ARRAY['boundary','administrative']<@tags AND ARRAY['admin_level','2']<@tags) AS mylist)
+			SELECT ltrim(a.entry,'n')::bigint AS osm_id
+			FROM numbered AS a JOIN numbered AS b
+			ON a.row = b.row-1 AND b.entry = 'admin_centre' WHERE a.entry ~ '^n[0-9]+'
+	) x
+	USING(osm_id);
+	
+========================================================
+
+	SELECT name
+	FROM planet_osm_point
+	JOIN (
+		SELECT ltrim(member, 'n')::bigint AS osm_id
+		FROM (
+			SELECT unnest(members) AS member
+			FROM planet_osm_rels
+			WHERE ARRAY['boundary','administrative']<@tags AND ARRAY['admin_level','6']<@tags) u
+		WHERE member LIKE 'n%') x
+	USING(osm_id);
+	
+	
+	WITH numbered AS(
+		SELECT row_number() OVER() AS row, entry
+		FROM(
+			SELECT unnest(members) AS entry
+			FROM planet_osm_rels
+			WHERE ARRAY['admin_level','2']<@tags AND ARRAY['boundary','administrative']<@tags) AS mylist)
+		SELECT a.entry
+		FROM numbered AS a JOIN numbered AS b
+		ON a.row = b.row-1 AND b.entry = 'admin_centre';
+		
+		
+	SELECT ltrim(member, 'n')::bigint AS osm_id
+    FROM (
+    	SELECT row_number() OVER() a AS row, unnest(members) AS member
+    	FROM planet_osm_rels
+		WHERE ARRAY['admin_level','2']<@tags AND ARRAY['boundary','administrative']<@tags) AS mylist
+		
+		
+SELECT row_number() OVER() a AS row, unnest(members) AS member FROM planet_osm_rels WHERE ARRAY['admin_level','2']<@tags AND ARRAY['boundary','administrative']<@tags
+		
+		
+	SELECT ltrim(member, 'n')::bigint AS osm_id
+    	FROM (
+    	SELECT row_number() OVER() a AS row, unnest(members) AS member
+    	FROM planet_osm_rels
+
+

@@ -1,0 +1,34 @@
+<!-- 
+  Hillshaded maps, from zoom 1 to 8 merged with colored one, for zoom 9 and more, hillshades only 
+  Color by altitude will interfer with color of forest, residential, swamp, all natural areas.
+-->
+<Style name="hillshade">
+	<Rule>
+		&maxscale_zoom9;
+		&minscale_zoom18;
+		<RasterSymbolizer opacity="0.83" comp-op="grain-merge" scaling="bilinear" />
+	</Rule>
+</Style>
+<Layer name="hillshade">
+	<StyleName>hillshade</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">mapnik-data/hillshade/hillshade.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>
+<Style name="relief">
+	<Rule>
+		&maxscale_zoom1;
+		&minscale_zoom8;
+		<RasterSymbolizer scaling="bilinear" />
+	</Rule>
+</Style>
+<Layer name="relief">
+	<StyleName>relief</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">mapnik-data/colored-hillshade/colored_hillshade.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>

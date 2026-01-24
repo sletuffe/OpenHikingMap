@@ -1,0 +1,12 @@
+#Since Tiles of low zoom between 5 and 11~13 are pretty long to generate, here are a few commands to
+#pregenerate when using tirex :
+
+# The whole world from zoom 0 to 9 (be patient !)
+tirex-batch -p 20 "map=opentopomap lon=-180,180 lat=-90,90 z=0-9" -f not-exists
+
+# The Alps (Marseille to Wien) from zoom 10 to 13 (opentopomap is highly used in the Alps, better pre-generate that)
+tirex-batch -p 20 "map=opentopomap lon=5,16 lat=43,48 z=10-13" -f not-exists
+
+# Pyrenees (Soria to Narbonne) from zoom 10 to 13
+tirex-batch -p 20 "map=opentopomap lon=-3,3 lat=41.5,43 z=10-13" -f not-exists
+
