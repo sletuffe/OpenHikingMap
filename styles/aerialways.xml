@@ -1,0 +1,23 @@
+<Style name="aerialways">
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom18;
+		<Filter>[aerialway] = 'cable_car' or [aerialway] = 'gondola'</Filter>
+		<LineSymbolizer stroke="black" stroke-width="0.5"/>
+		<LinePatternSymbolizer file="symbols/aerialway_gondola.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom18;
+		<Filter>[aerialway] = 'goods'</Filter>
+		<LineSymbolizer stroke="black" stroke-width="0.5"/>
+		<LinePatternSymbolizer file="symbols/aerialway_goods.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom13;
+		&minscale_zoom18;
+		<Filter>[aerialway] != 'cable_car' and [aerialway] != 'gondola' and [aerialway] != 'goods' and [aerialway] != 'proposed' and [aerialway] != 'construction' and [aerialway] != 'abandoned'</Filter>
+		<LineSymbolizer stroke="black" stroke-width="0.5"/>
+		<LinePatternSymbolizer file="symbols/aerialway.png"/>
+	</Rule>
+</Style>
