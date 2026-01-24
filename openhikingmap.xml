@@ -36,7 +36,8 @@
 	<!ENTITY airports-poly SYSTEM "styles/airports-poly.xml">
 	<!ENTITY roads-casing-lowzoom SYSTEM "styles/roads-casing-lowzoom.xml">
 	<!ENTITY roads-fill-lowzoom SYSTEM "styles/roads-fill-lowzoom.xml">
-	<!ENTITY roads-casing SYSTEM "styles/roads-casing.xml">
+  <!ENTITY roads-casing SYSTEM "styles/roads-casing.xml">
+  <!ENTITY path-in-mountain SYSTEM "styles/path-in-mountain.xml">
 	<!ENTITY roads-fill SYSTEM "styles/roads-fill.xml">
 	<!ENTITY trams SYSTEM "styles/trams.xml">
 	<!ENTITY housenumbers-poly SYSTEM "styles/housenumbers-poly.xml">
@@ -117,6 +118,7 @@
 	&roads-casing-lowzoom;
 	&roads-fill-lowzoom;
 	&roads-casing;
+  &path-in-mountain;
 	&roads-fill;
 	&trams;
 	&railway-points;
