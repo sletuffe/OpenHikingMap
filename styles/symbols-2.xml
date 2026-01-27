@@ -231,13 +231,13 @@
 	</Rule>
 	
 	<Rule>
-		&maxscale_zoom13;
+		&maxscale_zoom11;
 		&minscale_zoom13;
  		<Filter>[tourism] = 'alpine_hut'</Filter>
 		<MarkersSymbolizer file="symbols/tourism/alpine_hut.svg" width="16" height="16" fill="&poi_blue;"/>
 	</Rule>
 	<Rule>
-		&maxscale_zoom13;
+		&maxscale_zoom11;
 		&minscale_zoom13;
  		<Filter>[tourism] = 'wilderness_hut'</Filter>
 		<MarkersSymbolizer file="symbols/tourism/wilderness_hut.svg" width="16" height="16" fill="&poi_blue;"/>
@@ -257,12 +257,18 @@
   </Rule>
 	
 	<Rule>
-		&maxscale_zoom14;
-		&minscale_zoom18;
- 		<Filter>([amenity] = 'shelter') </Filter>
-		<PointSymbolizer file="symbols/shelter.png"/>
+		&maxscale_zoom12;
+		&minscale_zoom13;
+ 		<Filter>[amenity] = 'shelter'</Filter>
+		<MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="16" fill="&poi_blue;"/>
 	</Rule>
-	<Rule>
+  <Rule>
+    &maxscale_zoom14; &minscale_zoom18;
+    <Filter>[amenity] = 'shelter'</Filter>
+    <MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="16" fill="&poi_blue;" allow-overlap="true"/>
+    <TextSymbolizer fontset-name="sans-oblique" size="10" fill="&poi_blue;" halo-radius="2" halo-fill="rgba(255,255,255,0.7)" placement="point" dy="10" wrap-width="100" wrap-before="true">[name] + '\n' + [ele]</TextSymbolizer>
+  </Rule>
+  <Rule>
 		&maxscale_zoom13;
 		&minscale_zoom15;
  		<Filter>([tourism] = 'camp_site') </Filter>
