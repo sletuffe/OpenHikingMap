@@ -251,14 +251,14 @@
     &maxscale_zoom13;
     &minscale_zoom15;
     <Filter>([tourism] = 'camp_site') </Filter>
-    <PointSymbolizer file="symbols/campsite_z13.png"/>
+    <PointSymbolizer file="symbols/tourism/camp_site.svg"/>
   </Rule>
   <Rule>
     &maxscale_zoom16;
     &minscale_zoom18;
     <Filter>([tourism] = 'camp_site') </Filter>
-    <PointSymbolizer file="symbols/campsite.png"/>
-    <TextSymbolizer fontset-name="sans-oblique" size="10" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="8" wrap-width="100" wrap-before="true">[name]</TextSymbolizer>
+    <MarkersSymbolizer file="symbols/tourism/camp_site.svg" width="16" height="16" fill="&poi_blue;"/>
+    <TextSymbolizer fontset-name="sans-oblique" size="10" fill="&poi_blue;" halo-radius="2" halo-fill="rgba(255,255,255,0.7)" placement="point" dy="10" wrap-width="100" wrap-before="true">[name] + '\n' + [ele]</TextSymbolizer>
   </Rule>
   <Rule>
     &maxscale_zoom15;
