@@ -85,5 +85,10 @@
 		<Filter>([tourism] = 'viewpoint' and [secondangle]=360)</Filter>
         <PointSymbolizer file="symbols/viewpoint_360.svg" transform="rotate([secondrotation]) scale(0.9)" ignore-placement="true"  />
 	</Rule>
+  <Rule>
+    <Filter>[tourism] = 'viewpoint'</Filter>
+    &maxscale_zoom14;
+    <TextSymbolizer size="10" fill="#000" dy="12" fontset-name="sans-oblique" halo-radius="1">[ele]</TextSymbolizer>
+  </Rule>  
 </Style>
 

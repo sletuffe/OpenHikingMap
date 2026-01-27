@@ -323,7 +323,7 @@
 
   <!-- black text with elevation below unnamed poi -->
   <Rule>
-    <Filter>[tourism] = 'viewpoint' or [amenity] = 'parking'</Filter>
+    <Filter>[amenity] = 'parking'</Filter>
     &maxscale_zoom16;
     <TextSymbolizer size="10" fill="#000" dy="12" fontset-name="sans-oblique" halo-radius="1">[ele]</TextSymbolizer>
   </Rule>
