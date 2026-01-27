@@ -362,7 +362,7 @@
 		<StyleName>trams</StyleName>
     <StyleName>path-in-mountain</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,ST_Length(way) AS length,highway,construction,name,sac_scale,trail_visibility,via_ferrata_scale,service,surface,tracktype,lanes,embankment,oneway,railway,leisure,sport,attraction,tunnel FROM planet_osm_line WHERE (!scale_denominator! &gt; 300000) OR ((bridge IS NULL OR bridge = 'no') AND (tunnel IS NULL OR tunnel != 'yes')) AND (highway IS NOT NULL OR railway='tram' OR leisure='track' OR attraction='summer_toboggan') ORDER BY (CASE WHEN highway IN ('motorway','trunk') THEN 5 WHEN highway='primary' THEN 1 WHEN highway='secondary' THEN 2 WHEN highway='tertiary' THEN 3 ELSE 4 END) DESC ) AS roads</Parameter> 
+			<Parameter name="table">(SELECT way,ST_Length(way) AS length,highway,construction,name,sac_scale,trail_visibility,via_ferrata_scale,service,surface,tracktype,smoothness,lanes,embankment,oneway,railway,leisure,sport,attraction,tunnel FROM planet_osm_line WHERE (!scale_denominator! &gt; 300000) OR ((bridge IS NULL OR bridge = 'no') AND (tunnel IS NULL OR tunnel != 'yes')) AND (highway IS NOT NULL OR railway='tram' OR leisure='track' OR attraction='summer_toboggan') ORDER BY (CASE WHEN highway IN ('motorway','trunk') THEN 5 WHEN highway='primary' THEN 1 WHEN highway='secondary' THEN 2 WHEN highway='tertiary' THEN 3 ELSE 4 END) DESC ) AS roads</Parameter> 
 			&postgis-settings;
 		</Datasource>
 	</Layer>
@@ -522,7 +522,7 @@
 		<StyleName>symbols-2</StyleName>
 		<StyleName>symbols-poly</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,access,amenity,highway,historic,"memorial:type",castle_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,NULL AS "summit:cross",tourism,"power","generator:source","site_type",leisure,sport,leaf_type,disused,abandoned,railway,otm_isolation::INTEGER,hiking,way_area FROM planet_osm_polygon) AS symbols </Parameter>
+			<Parameter name="table">(SELECT way,access,amenity,shelter_type,highway,historic,"memorial:type",castle_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,NULL AS "summit:cross",tourism,"power","generator:source","site_type",leisure,sport,leaf_type,disused,abandoned,railway,otm_isolation::INTEGER,hiking,way_area FROM planet_osm_polygon) AS symbols </Parameter>
 			&postgis-settings;
 		</Datasource>
 	</Layer>
@@ -532,7 +532,7 @@
 		<StyleName>symbols-2</StyleName>
 		<StyleName>symbols-point</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,access,amenity,highway,historic,"memorial:type",castle_type,leaf_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,"summit:cross",tourism,"power","generator:source","site_type",sport,disused,abandoned,railway,train,subway,otm_isolation::INTEGER,hiking FROM planet_osm_point) AS symbols </Parameter>
+			<Parameter name="table">(SELECT way,access,amenity,shelter_type,highway,historic,"memorial:type",castle_type,leaf_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,"summit:cross",tourism,"power","generator:source","site_type",sport,disused,abandoned,railway,train,subway,otm_isolation::INTEGER,hiking FROM planet_osm_point) AS symbols </Parameter>
 			&postgis-settings;
 		</Datasource>
 	</Layer>
