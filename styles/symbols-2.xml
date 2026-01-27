@@ -273,7 +273,7 @@
     &maxscale_zoom13;
     &minscale_zoom15;
     <Filter>([tourism] = 'camp_site') </Filter>
-    <PointSymbolizer file="symbols/tourism/camp_site.svg"/>
+    <MarkersSymbolizer file="symbols/tourism/camp_site.svg" width="16" height="16" fill="&poi_blue;"/>
   </Rule>
   
   <Rule>
