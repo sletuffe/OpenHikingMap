@@ -152,8 +152,8 @@
   &symbols-1;
 	&symbols-2;
 	&symbols-poly;
-	&symbols-point;
-	&symbols-viewpoint;
+  &symbols-viewpoint;
+  &symbols-point;
 	&text-roads-ref;
 	&text-waterways;
 
@@ -509,7 +509,14 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-
+  <Layer name="symbols-viewpoint">
+    <StyleName>symbols-viewpoint</StyleName>
+    <Datasource>
+      <Parameter name="table">(SELECT way,tourism,ele,(int_dir).s1 as firstrotation,(int_dir).a1 as firstangle,(int_dir).s2 as secondrotation,(int_dir).a2 as secondangle FROM (SELECT way,tourism,ele,viewpointdirection(direction) AS int_dir FROM planet_osm_point WHERE (tourism='viewpoint')) AS viewpoints) AS symbols</Parameter>
+      &postgis-settings;
+    </Datasource>
+  </Layer>
+  
 	<Layer name="symbols-poly">
 		<StyleName>symbols-1</StyleName>
 		<StyleName>symbols-2</StyleName>
@@ -552,14 +559,6 @@
 	   <Parameter name="table">(SELECT way,name,areatype,way_area,nextregionsize,subregionsize FROM naturalarealabels) AS naturallabels </Parameter>
 	   &postgis-settings;
 	 </Datasource>
-	</Layer>
-
-	<Layer name="symbols-viewpoint">
-		<StyleName>symbols-viewpoint</StyleName>
-		<Datasource>
-			<Parameter name="table">(SELECT way,tourism,ele,(int_dir).s1 as firstrotation,(int_dir).a1 as firstangle,(int_dir).s2 as secondrotation,(int_dir).a2 as secondangle FROM (SELECT way,tourism,ele,viewpointdirection(direction) AS int_dir FROM planet_osm_point WHERE (tourism='viewpoint' AND direction IS NOT NULL)) AS viewpoints) AS symbols</Parameter>
-			&postgis-settings;
-		</Datasource>
 	</Layer>
 
 	<Layer name="road-names-text">
