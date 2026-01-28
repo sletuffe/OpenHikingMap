@@ -11,6 +11,7 @@
 	 trail_visibility=excellent Unambiguous path or markers everywhere None, orientation unproblematic, no map required
 	 trail_visibility=good 	Next marker always visible, but sometimes has to be searched for. Basic sense of direction, map recommended
 	 or ''
+  all city path having [surface] = 'asphalt' are excluded (another rendering for then as black line is in roads-casing.xml
 	-->
   <Rule>
     <Filter>[highway] = 'via_ferrata'</Filter>
@@ -26,6 +27,7 @@
 		    and not [trail_visibility]='horrible' 
 		    and not [trail_visibility]='bad' 
 		    and not [trail_visibility]='no')
+        and not [surface] = 'asphalt'
 	    </Filter>
 	    &maxscale_zoom14;
 	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/></Rule>
@@ -37,11 +39,10 @@
 		    and not [trail_visibility]='horrible' 
 		    and not [trail_visibility]='bad' 
 		    and not [trail_visibility]='no')
+        and not [surface] = 'asphalt'
 	    </Filter>
 	    &maxscale_zoom14;
 	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/></Rule>
-    <!-- le cas "non special" n'est pas identifie par un elsefilter (il n'y a pas que les path) mais c'est 
-	 a peut pret ca-->
     <Rule>
 	    <Filter>([highway] = 'footway' or [highway] = 'path') 
 		    and 
@@ -77,6 +78,7 @@
 		    or [trail_visibility]='bad' 
 		    or [trail_visibility]='horrible' 
 		    or [trail_visibility]='no')
+        and not [surface] = 'asphalt'
 	    </Filter>
 	    &maxscale_zoom14;
 	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/></Rule>
@@ -89,16 +91,19 @@
 		    or [trail_visibility]='bad' 
 		    or [trail_visibility]='horrible' 
 		    or [trail_visibility]='no')
+        and not [surface] = 'asphalt'
 	    </Filter>
 	    &maxscale_zoom14;
 	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/></Rule>
-    <!-- for sac_scale=hiking, sac_scale=mountain_hiking or unspecified -->
+    <!-- for sac_scale=hiking, sac_scale=mountain_hiking or unspecified and path hard to find -->
     <Rule>
 	    <Filter>([highway] = 'footway' or [highway] = 'path') 
 		    and 
 		    ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
 		    and 
         ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
+        and
+        not [surface] = 'asphalt'
 	    </Filter>
 	    &maxscale_zoom14;
 	    <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
