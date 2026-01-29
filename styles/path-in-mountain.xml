@@ -1,113 +1,79 @@
 <Style name="path-in-mountain">
   <Rule>
-      <Filter>[highway] = 'steps'</Filter>
-      &maxscale_zoom16;
-      <LineSymbolizer stroke="salmon" stroke-width="5.0" stroke-dasharray="2,1"/>
+    <Filter>[highway] = 'steps'</Filter>
+    &maxscale_zoom16;
+    <LineSymbolizer stroke="salmon" stroke-width="5.0" stroke-dasharray="2,1"/>
   </Rule>
-    <!-- sly's hiking special
-	 6 sac_scale for 6 trail_visibility makes too much ! 
-	 I drop to 3 by 2 
-	 1)
-	 trail_visibility=excellent Unambiguous path or markers everywhere None, orientation unproblematic, no map required
-	 trail_visibility=good 	Next marker always visible, but sometimes has to be searched for. Basic sense of direction, map recommended
-	 or ''
-  all city path having [surface] = 'asphalt' are excluded (another rendering for then as black line is in roads-casing.xml
-	-->
   <Rule>
     <Filter>[highway] = 'via_ferrata'</Filter>
     &maxscale_zoom14;
     <LinePatternSymbolizer file="symbols/via_ferrata.png"/>
   </Rule>
-
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and ([sac_scale]='demanding_mountain_hiking' 
-		    or [sac_scale]='alpine_hiking') 
-		    and (not [trail_visibility]='intermediate' 
-		    and not [trail_visibility]='horrible' 
-		    and not [trail_visibility]='bad' 
-		    and not [trail_visibility]='no')
-        and not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/></Rule>
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and ([sac_scale]='demanding_alpine_hiking' 
-		    or [sac_scale]='difficult_alpine_hiking') 
-		    and (not [trail_visibility]='intermediate' 
-		    and not [trail_visibility]='horrible' 
-		    and not [trail_visibility]='bad' 
-		    and not [trail_visibility]='no')
-        and not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/></Rule>
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and 
-		    (not [sac_scale]='demanding_mountain_hiking' 
-		    and not [sac_scale]='alpine_hiking' 
-		    and not [sac_scale]='demanding_alpine_hiking' 
-		    and not [sac_scale]='difficult_alpine_hiking') 
-		    
-		    and (not [trail_visibility]='intermediate' 
-		    and not [trail_visibility]='horrible' 
-		    and not [trail_visibility]='bad' 
-		    and not [trail_visibility]='no')
-        and not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="2" stroke-linecap="round" stroke-opacity="1"/></Rule>
-    <!--
-	2) visibility  :
-	trail_visibility=intermediate 	 Track mostly visible 	 Good sense of direction, map required
-	trail_visibility=bad 	Path sometimes invisible, route partly pathless 	Basic skills in orientation
-	trail_visibility=horrible 	Often pathless 	Advanced orientational skills
-	trail_visibility=no
-	-->
-    
-    
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and not ([tunnel] = 'yes') 
-		    and ([sac_scale]='demanding_mountain_hiking' 
-		    or [sac_scale]='alpine_hiking') 
-		    and 
-		    ([trail_visibility]='intermediate' 
-		    or [trail_visibility]='bad' 
-		    or [trail_visibility]='horrible' 
-		    or [trail_visibility]='no')
-        and not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/></Rule>
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and not ([tunnel] = 'yes') 
-		    and ([sac_scale]='demanding_alpine_hiking' 
-		    or [sac_scale]='difficult_alpine_hiking') 
-		    and ([trail_visibility]='intermediate' 
-		    or [trail_visibility]='bad' 
-		    or [trail_visibility]='horrible' 
-		    or [trail_visibility]='no')
-        and not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/></Rule>
-    <!-- for sac_scale=hiking, sac_scale=mountain_hiking or unspecified and path hard to find -->
-    <Rule>
-	    <Filter>([highway] = 'footway' or [highway] = 'path') 
-		    and 
-		    ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
-		    and 
-        ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
-        and
-        not [surface] = 'asphalt'
-	    </Filter>
-	    &maxscale_zoom14;
-	    <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
-    </Rule>
-<!-- SLY's hiking special END -->
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and ([sac_scale]='demanding_mountain_hiking' or [sac_scale]='alpine_hiking') 
+      and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/>
+  </Rule>
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and ([sac_scale]='demanding_alpine_hiking' or [sac_scale]='difficult_alpine_hiking') 
+      and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke-opacity="1" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/>
+  </Rule>
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and (not [sac_scale]='demanding_mountain_hiking' and not [sac_scale]='alpine_hiking' and not [sac_scale]='demanding_alpine_hiking' and not [sac_scale]='difficult_alpine_hiking') 
+      and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="2" stroke-linecap="round" stroke-opacity="1"/>
+  </Rule>
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and not ([tunnel] = 'yes') 
+      and ([sac_scale]='demanding_mountain_hiking' or [sac_scale]='alpine_hiking') 
+      and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='horrible' or [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="2"/>
+  </Rule>
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and not ([tunnel] = 'yes') 
+      and ([sac_scale]='demanding_alpine_hiking' or [sac_scale]='difficult_alpine_hiking') 
+      and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='horrible' or [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="2"/>
+  </Rule>
+  <Rule>
+    <Filter>
+      ([highway] = 'footway' or [highway] = 'path') 
+      and ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
+      and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
+      and not [surface] = 'asphalt'
+    </Filter>
+    &maxscale_zoom14;
+    <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom16;
+    <Filter>([highway] = 'footway' or [highway] = 'path') and [sac_grade] != null</Filter>
+    <TextSymbolizer fontset-name="sans-condensed" size="9" fill="#f12b2b" halo-radius="1.5" halo-fill="rgba(255,255,255,0.8)" placement="line" spacing="400" repeat-distance="100" dy="4" opacity="0.9">[sac_grade]</TextSymbolizer>
+  </Rule>
 </Style>
-  
