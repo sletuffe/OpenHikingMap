@@ -268,7 +268,7 @@
 	<Layer name="buildings">
 		<StyleName>buildings</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,building,leisure,railway,amenity,aeroway FROM planet_osm_polygon WHERE (building IS NOT NULL AND building != 'no') OR (aeroway = 'terminal')) AS buildings </Parameter>
+			<Parameter name="table">(SELECT way,name,building,leisure,railway,amenity,aeroway FROM planet_osm_polygon WHERE (building IS NOT NULL AND building != 'no') OR (aeroway = 'terminal')) AS buildings </Parameter>
 			&postgis-settings;
 		</Datasource>
 	</Layer>

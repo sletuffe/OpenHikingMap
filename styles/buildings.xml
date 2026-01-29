@@ -16,11 +16,14 @@
 		&minscale_zoom16;
 		<LineSymbolizer stroke="black" stroke-width="1.5" />
 		<PolygonSymbolizer fill="#555555" />
+		<TextSymbolizer fontset-name="sans-oblique" size="11" fill="black" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point">[name]</TextSymbolizer>
+    
 	</Rule>
 	<Rule>
 		&maxscale_zoom17;
 		&minscale_zoom18;
 		<PolygonPatternSymbolizer file="symbols/building_z17.png"/>
 		<LineSymbolizer stroke="black" stroke-width="0.7" />
+		<TextSymbolizer fontset-name="sans-oblique" size="11" fill="black" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 </Style>
