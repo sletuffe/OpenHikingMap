@@ -82,13 +82,13 @@
     &maxscale_zoom12;
     &minscale_zoom13;
     <Filter>[amenity] = 'shelter' and ([shelter_type] = '' or [shelter_type] = 'weather_shelter' or [shelter_type] = 'basic_hut' or [shelter_type] = 'lean_to')</Filter>
-    <MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="16" fill="&poi_blue;"/>
+    <MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="12" fill="&poi_blue;"/>
   </Rule>
   
   <Rule>
     &maxscale_zoom14; &minscale_zoom18;
     <Filter>[amenity] = 'shelter' and ([shelter_type] = '' or [shelter_type] = 'weather_shelter' or [shelter_type] = 'basic_hut' or [shelter_type] = 'lean_to')</Filter>
-    <MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="16" fill="&poi_blue;"/>
+    <MarkersSymbolizer file="symbols/amenity/shelter.svg" width="16" height="12" fill="&poi_blue;"/>
     <TextSymbolizer fontset-name="sans-oblique" size="10" fill="&poi_blue;" halo-radius="2" halo-fill="rgba(255,255,255,0.7)" placement="point" dy="10" wrap-width="100" wrap-before="true">[name] + '\n' + [ele]</TextSymbolizer>
   </Rule>
   
