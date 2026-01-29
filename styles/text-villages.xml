@@ -5,7 +5,7 @@
 		&minscale_zoom11;
 		<Filter>([place] = 'village') and ([population] &gt; 1000)</Filter>
 		<PointSymbolizer file="symbols/small_town.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
             <Placement dx="4" dy="-3" />
             <Placement dx="0" dy="5" />
             <Placement dx="4" dy="3" />
@@ -25,7 +25,7 @@
 		&maxscale_zoom12;
 		&minscale_zoom12;
 		<Filter>([place] = 'village') and not ([population] &gt; 1000)</Filter>
-		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" dx="4" dy="-3">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" dx="4" dy="-3">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom12;
@@ -93,7 +93,7 @@
 		&maxscale_zoom14;
 		&minscale_zoom14;
 		<Filter>([place] = 'hamlet' or [place] = 'isolated_dwelling')</Filter>
-		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" dx="13" dy="-7">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" dx="13" dy="-7">[name]</TextSymbolizer>
 	</Rule>
 
 <!-- zoom 15-17 -->
@@ -114,12 +114,12 @@
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>([place] = 'hamlet' or [place] = 'isolated_dwelling')</Filter>
-		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" dx="20" wrap-width="100" placement="point">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" dx="20" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
 		<Filter>([place] = 'locality')</Filter>
-		<TextSymbolizer fontset-name="sans-oblique" size="10" fill="black" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point">[name]</TextSymbolizer>
+		<TextSymbolizer fontset-name="sans-oblique" size="12" fill="black" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 </Style>
