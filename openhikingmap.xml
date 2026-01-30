@@ -268,7 +268,7 @@
 	<Layer name="buildings">
 		<StyleName>buildings</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,name,building,leisure,railway,amenity,aeroway FROM planet_osm_polygon WHERE (building IS NOT NULL AND building != 'no') OR (aeroway = 'terminal')) AS buildings </Parameter>
+			<Parameter name="table">(SELECT way,name FROM planet_osm_polygon WHERE (building IS NOT NULL AND building != 'no') OR (aeroway = 'terminal')) AS buildings </Parameter>
 			&postgis-settings;
 		</Datasource>
 	</Layer>
@@ -518,13 +518,6 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-  <Layer name="symbols-viewpoint">
-    <StyleName>symbols-viewpoint</StyleName>
-    <Datasource>
-      <Parameter name="table">(SELECT way,tourism,ele,(int_dir).s1 as firstrotation,(int_dir).a1 as firstangle,(int_dir).s2 as secondrotation,(int_dir).a2 as secondangle FROM (SELECT way,tourism,ele,viewpointdirection(direction) AS int_dir FROM planet_osm_point WHERE (tourism='viewpoint')) AS viewpoints) AS symbols</Parameter>
-      &postgis-settings;
-    </Datasource>
-  </Layer>
   
 	<Layer name="symbols-poly">
 		<StyleName>symbols-1</StyleName>
@@ -553,7 +546,14 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
-
+  <Layer name="symbols-viewpoint">
+    <StyleName>symbols-viewpoint</StyleName>
+    <Datasource>
+      <Parameter name="table">(SELECT way,tourism,ele,(int_dir).s1 as firstrotation,(int_dir).a1 as firstangle,(int_dir).s2 as secondrotation,(int_dir).a2 as secondangle FROM (SELECT way,tourism,ele,viewpointdirection(direction) AS int_dir FROM planet_osm_point WHERE (tourism='viewpoint')) AS viewpoints) AS symbols</Parameter>
+      &postgis-settings;
+    </Datasource>
+  </Layer>
+  
     <Layer name="text-glacier-lowzoom">
 		<StyleName>text-glacier-lowzoom</StyleName>
 		<Datasource>
