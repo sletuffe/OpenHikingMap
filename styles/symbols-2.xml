@@ -229,14 +229,14 @@
 	</Rule>
   
   <Rule>
-    &maxscale_zoom15;
+    &maxscale_zoom16;
     &minscale_zoom18;
     <Filter>[amenity] = 'fuel'</Filter>
     <MarkersSymbolizer file="symbols/amenity/fuel.svg" width="16" height="16" fill="&poi_blue;"/>
   </Rule>
   
   <Rule>
-    &maxscale_zoom15;
+    &maxscale_zoom16;
     &minscale_zoom18;
     <Filter>[amenity] = 'toilets'</Filter>
     <MarkersSymbolizer file="symbols/amenity/toilets.svg" width="16" height="16" fill="&poi_blue;"/>
