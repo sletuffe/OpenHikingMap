@@ -42,7 +42,7 @@
     &maxscale_zoom14;
     &minscale_zoom14;
     <Filter>([ele] % 100 != 0) and ([ele] % 50 = 0)</Filter>
-    <TextSymbolizer fontset-name="sans-book" size="8" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200" initial-gap="200">[ele]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-book" size="8" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200">[ele]</TextSymbolizer>
   </Rule>
 
   <!-- 10 m -->
@@ -56,13 +56,13 @@
     &maxscale_zoom15;
     &minscale_zoom15;
     <Filter>([ele] % 10 = 0)</Filter>
-    <TextSymbolizer fontset-name="sans-book" size="8" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800" initial-gap="400">[ele]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-book" size="8" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800">[ele]</TextSymbolizer>
   </Rule>
   <Rule>
     &maxscale_zoom16;
     &minscale_zoom18;
     <Filter>([ele] % 10 = 0)</Filter>
-    <TextSymbolizer fontset-name="sans-book" size="9" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800" initial-gap="600">[ele]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-book" size="9" fill="#7d5439" upright="left" halo-radius="2" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800">[ele]</TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contours" clear-label-cache="on">
