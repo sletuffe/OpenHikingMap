@@ -7,7 +7,7 @@
   <Rule>
     &maxscale_zoom13; &minscale_zoom13;
     <Filter>[highway] = 'track' and not ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or [tracktype] = 'grade1')</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="0.7" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="0.7" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
@@ -18,26 +18,26 @@
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and ([smoothness] = 'horrible' or [smoothness] = 'very_horrible' or ([smoothness] = null and [tracktype] = 'grade5'))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-dasharray="4,4" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-dasharray="4,4" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-dasharray="4,4" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-dasharray="4,4" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and ([smoothness] = 'very_bad' or ([smoothness] = null and ([tracktype] = 'grade3' or [tracktype] = 'grade4')))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-dasharray="6,4" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-dasharray="6,4" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and ([smoothness] = 'intermediate' or [smoothness] = 'bad' or ([smoothness] = null and [tracktype] = 'grade2'))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and not ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or [smoothness] = 'intermediate' or [smoothness] = 'bad' or [smoothness] = 'very_bad' or [smoothness] = 'horrible' or [smoothness] = 'very_horrible' or [tracktype] = 'grade1' or [tracktype] = 'grade2' or [tracktype] = 'grade3' or [tracktype] = 'grade4' or [tracktype] = 'grade5')</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="1" stroke-dasharray="5,5" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="-1" stroke-dasharray="5,5" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="1" stroke-dasharray="5,5" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="-1" stroke-dasharray="5,5" stroke-opacity="0.65" />
     <TextSymbolizer fontset-name="sans-condensed" size="11" fill="#8B4513" opacity="0.7" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="180">"?"</TextSymbolizer>
   </Rule>
   
@@ -50,26 +50,26 @@
   <Rule>
     &maxscale_zoom16; &minscale_zoom18;
     <Filter>[highway] = 'track' and ([smoothness] = 'horrible' or [smoothness] = 'very_horrible' or ([smoothness] = null and [tracktype] = 'grade5'))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-dasharray="4,4" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-dasharray="4,4" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-dasharray="4,4" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-dasharray="4,4" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom16; &minscale_zoom18;
     <Filter>[highway] = 'track' and ([smoothness] = 'very_bad' or ([smoothness] = null and ([tracktype] = 'grade3' or [tracktype] = 'grade4')))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-dasharray="6,4" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-dasharray="6,4" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom16; &minscale_zoom18;
     <Filter>[highway] = 'track' and ([smoothness] = 'intermediate' or [smoothness] = 'bad' or ([smoothness] = null and [tracktype] = 'grade2'))</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="1.8" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.2" offset="-1.8" stroke-opacity="0.65" />
   </Rule>
   <Rule>
     &maxscale_zoom16; &minscale_zoom18;
     <Filter>[highway] = 'track' and not ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or [smoothness] = 'intermediate' or [smoothness] = 'bad' or [smoothness] = 'very_bad' or [smoothness] = 'horrible' or [smoothness] = 'very_horrible' or [tracktype] = 'grade1' or [tracktype] = 'grade2' or [tracktype] = 'grade3' or [tracktype] = 'grade4' or [tracktype] = 'grade5')</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="1.8" stroke-dasharray="5,5" stroke-opacity="0.5" />
-    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="-1.8" stroke-dasharray="5,5" stroke-opacity="0.5" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="1.8" stroke-dasharray="5,5" stroke-opacity="0.65" />
+    <LineSymbolizer stroke="#8B4513" stroke-width="1.1" offset="-1.8" stroke-dasharray="5,5" stroke-opacity="0.65" />
     <TextSymbolizer fontset-name="sans-condensed" size="11" fill="#8B4513" opacity="0.7" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="180">"?"</TextSymbolizer>
   </Rule>  
 </Style>
