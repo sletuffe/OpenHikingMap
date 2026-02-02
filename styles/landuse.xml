@@ -1,26 +1,6 @@
 <Style name="landuse">
-    <!-- Forest outlines. Once more in landuse-over-hillshade -->
-    <Rule>
-		&maxscale_zoom11;
-		&minscale_zoom11;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-        <LineSymbolizer stroke="#61983c" stroke-width="0.3" stroke-opacity="0.3" />
-	</Rule>
-   <Rule>
-		&maxscale_zoom12;
-		&minscale_zoom13;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-        <LineSymbolizer stroke="#61983c" stroke-width="0.6" stroke-opacity="0.3" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom14;
-		&minscale_zoom18;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-		<LinePatternSymbolizer opacity="0.9" file="symbols/forest-outline.png"/>
-	</Rule>
-
-    <Rule>
-		&maxscale_zoom11;
+  <Rule>
+    &maxscale_zoom11;
 		&minscale_zoom11;
 		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
 		<PolygonSymbolizer fill="#b9d984" />

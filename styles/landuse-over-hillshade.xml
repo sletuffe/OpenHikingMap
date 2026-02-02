@@ -42,27 +42,6 @@
 		<PolygonSymbolizer fill="#ffffd9" comp-op="soft-light" fill-opacity="0.5" />
 	</Rule>
 	
-	<!-- forest outlines again -->
-    <Rule>
-		&maxscale_zoom11;
-		&minscale_zoom11;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-        <LineSymbolizer stroke="#61983c" stroke-width="0.3" stroke-opacity="0.4" />
-	</Rule>
-    <Rule>
-		&maxscale_zoom12;
-		&minscale_zoom13;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-        <LineSymbolizer stroke="#61983c" stroke-width="0.6" stroke-opacity="0.4" />
-	</Rule>
-	<Rule>
-		&maxscale_zoom14;
-		&minscale_zoom18;
-		<Filter>([natural] = 'wood' or [landuse] = 'wood' or [landuse] = 'forest')</Filter>
-		<LinePatternSymbolizer opacity="0.5" file="symbols/forest-outline.png"/>
-	</Rule>
-	
-
 	<!-- glaciers -->
 	<Rule>
 		&maxscale_zoom9;
@@ -71,7 +50,6 @@
 		<PolygonSymbolizer fill="#d0f8ff" fill-opacity="0.5"/>
 	</Rule>
 	
-
 	<!-- residential fills -->
 	<Rule>
 		&maxscale_zoom10;
