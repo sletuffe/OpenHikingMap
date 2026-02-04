@@ -1,6 +1,6 @@
 <Style name="symbols-2">
   <Rule>
-    &maxscale_zoom11;
+    &maxscale_zoom12;
     &minscale_zoom13;
     <Filter>[tourism] = 'alpine_hut'</Filter>
     <MarkersSymbolizer file="symbols/tourism/alpine_hut.svg" width="16" height="16" fill="&poi_blue;"/>
@@ -14,7 +14,7 @@
   </Rule>
   
   <Rule>
-    &maxscale_zoom11;
+    &maxscale_zoom12;
     &minscale_zoom13;
     <Filter>[tourism] = 'wilderness_hut'</Filter>
     <MarkersSymbolizer file="symbols/tourism/wilderness_hut.svg" width="16" height="16" fill="&poi_blue;"/>
