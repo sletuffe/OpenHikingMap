@@ -1,14 +1,10 @@
 <Style name="tracks">
   <Rule>
-    &maxscale_zoom12; &minscale_zoom13;
-    <Filter>[highway] = 'track' and ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or [tracktype] = 'grade1')</Filter>
-    <LineSymbolizer stroke="black" stroke-width="0.8" />
-  </Rule>
-  <Rule>
-    &maxscale_zoom13; &minscale_zoom13;
-    <Filter>[highway] = 'track' and not ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or [tracktype] = 'grade1')</Filter>
-    <LineSymbolizer stroke="#8B4513" stroke-width="0.7" stroke-opacity="0.65" />
-  </Rule>
+    <Filter>[highway] = 'track'</Filter>
+    &maxscale_zoom13;
+    &minscale_zoom13;
+    <LineSymbolizer stroke-linejoin="round" stroke="white" stroke-width="3" stroke-linecap="round" stroke-opacity="0.4"/><LineSymbolizer stroke-linejoin="round" stroke="#996600" stroke-width="1.5" stroke-dasharray="3,4" stroke-linecap="round"/>
+  </Rule>      
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or ([smoothness] = null and [tracktype] = 'grade1'))</Filter>
