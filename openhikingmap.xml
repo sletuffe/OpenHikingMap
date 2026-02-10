@@ -530,7 +530,7 @@
 		<StyleName>symbols-2</StyleName>
 		<StyleName>symbols-point</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,access,amenity,barrier,leisure,shelter_type,highway,historic,"memorial:type",castle_type,leaf_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,"summit:cross",tourism,"power","generator:source","site_type",sport,disused,abandoned,railway,train,subway,otm_isolation::INTEGER,hiking FROM planet_osm_point) AS symbols </Parameter>
+			<Parameter name="table">(SELECT way,access,amenity,barrier,leisure,shelter_type,highway,historic,"memorial:type",castle_type,leaf_type,religion,denomination,denotation,fee,man_made,"tower:type","communication:radio","communication:television",'('&#124;&#124;substring(height from '^[\d]+')&#124;&#124;')' as height,building,"natural",name,ele,ruins,"summit:cross",tourism,information,"power","generator:source","site_type",sport,disused,abandoned,railway,train,subway,otm_isolation::INTEGER,hiking FROM planet_osm_point) AS symbols </Parameter>
 			&postgis-settings;
 		</Datasource>
 	</Layer>
