@@ -124,7 +124,7 @@
   </Rule>
   <!-- a tiny line for all footway  -->
   <Rule>
-    &maxscale_zoom14;
+    &maxscale_zoom13;
     &minscale_zoom18;
     <Filter>[highway] = 'footway'</Filter>
     <LineSymbolizer stroke="black" stroke-width="0.8" stroke-opacity="0.8"/>
