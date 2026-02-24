@@ -14,7 +14,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' )
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and ([sac_scale]='demanding_mountain_hiking' or [sac_scale]='alpine_hiking') 
       and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
     </Filter>
@@ -24,7 +24,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' )
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and ([sac_scale]='demanding_alpine_hiking' or [sac_scale]='difficult_alpine_hiking') 
       and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
     </Filter>
@@ -34,7 +34,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' ) 
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and (not [sac_scale]='demanding_mountain_hiking' and not [sac_scale]='alpine_hiking' and not [sac_scale]='demanding_alpine_hiking' and not [sac_scale]='difficult_alpine_hiking') 
       and (not [trail_visibility]='intermediate' and not [trail_visibility]='horrible' and not [trail_visibility]='bad' and not [trail_visibility]='no')
     </Filter>
@@ -44,7 +44,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' )
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and not ([tunnel] = 'yes') 
       and ([sac_scale]='demanding_mountain_hiking' or [sac_scale]='alpine_hiking') 
       and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='horrible' or [trail_visibility]='no')
@@ -55,7 +55,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' )
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and not ([tunnel] = 'yes') 
       and ([sac_scale]='demanding_alpine_hiking' or [sac_scale]='difficult_alpine_hiking') 
       and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='horrible' or [trail_visibility]='no')
@@ -66,7 +66,7 @@
   <Rule>
     &maxscale_zoom13;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' )
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle]  = 'designated'
       and ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
       and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
     </Filter>
@@ -75,7 +75,10 @@
   
   <Rule>
     &maxscale_zoom16;
-    <Filter>( [highway] = 'path' or [highway] = 'footway' ) and [sac_grade] != null</Filter>
+    <Filter>
+      ( [highway] = 'path' or [highway] = 'footway' )  and not [bicycle]  = 'designated' 
+      and [sac_grade] != null
+    </Filter>
     <TextSymbolizer fontset-name="sans-condensed" size="9" fill="#f12b2b" halo-radius="1.5" halo-fill="rgba(255,255,255,0.8)" placement="line" spacing="400" repeat-distance="100" dy="4" opacity="0.9">[sac_grade]</TextSymbolizer>
   </Rule>
 </Style>
