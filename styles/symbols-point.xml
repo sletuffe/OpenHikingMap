@@ -59,7 +59,7 @@
     <MarkersSymbolizer file="symbols/tourism/information.svg" width="16" height="16" fill="&poi_blue;"/>
   </Rule>    
   <Rule>
-    &maxscale_zoom13; &minscale_zoom18;
+    &maxscale_zoom15; &minscale_zoom18;
     <Filter>([natural] = 'cave_entrance')</Filter>
     <MarkersSymbolizer file="symbols/natural/cave.svg" width="18" height="18"/>
   </Rule>
