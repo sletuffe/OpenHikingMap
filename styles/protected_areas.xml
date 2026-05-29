@@ -57,10 +57,26 @@
 		<Filter>[way_area] &lt; 1E6</Filter>
 		<TextSymbolizer fontset-name="sans-condensed-oblique" size="11" fill="#608c31" halo-radius="1" halo-fill="rgba(255,255,255,0.7)" wrap-width="100" wrap-before="true" placement="interior">[name]</TextSymbolizer>
 	</Rule>
+  <!-- Boundary: simple line at low zoom, inner glow from zoom 14 -->
   <Rule>
     &maxscale_zoom12;
-    &minscale_zoom18;
+    &minscale_zoom13;
     <LineSymbolizer stroke="#497a13" stroke-width="5" stroke-opacity="0.5"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom14;
+    &minscale_zoom15;
+    <LineSymbolizer stroke="#497a13" stroke-width="10" stroke-opacity="0.10" offset="-4.5"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="5"  stroke-opacity="0.18" offset="-2"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="2"  stroke-opacity="0.8"/>
+  </Rule>
+  <Rule>
+    &maxscale_zoom16;
+    &minscale_zoom18;
+    <LineSymbolizer stroke="#497a13" stroke-width="16" stroke-opacity="0.08" offset="-7"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="9"  stroke-opacity="0.14" offset="-3.5"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="4"  stroke-opacity="0.25" offset="-1.5"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="2"  stroke-opacity="0.8"/>
   </Rule>
   
 </Style>
