@@ -61,7 +61,7 @@
   <Rule>
     &maxscale_zoom12;
     &minscale_zoom13;
-    <LineSymbolizer stroke="#497a13" stroke-width="5" stroke-opacity="0.5"/>
+    <LineSymbolizer stroke="#497a13" stroke-width="2" stroke-opacity="0.7"/>
   </Rule>
   <Rule>
     &maxscale_zoom14;
