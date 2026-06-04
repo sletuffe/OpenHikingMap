@@ -74,7 +74,7 @@
     &maxscale_zoom13;
     <Filter>
       ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated'
-      and ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
+      and ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale]='strolling' or [sac_scale] is null) 
       and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
     </Filter>
     <LineSymbolizer stroke="white" stroke-width="3.2" stroke-opacity="0.5" stroke-linecap="round"/>
