@@ -52,7 +52,7 @@
       ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated'
       and not ([tunnel] = 'yes') 
       and ([sac_scale]='demanding_mountain_hiking' or [sac_scale]='alpine_hiking') 
-      and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='no')
+      and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
     </Filter>
     <LineSymbolizer stroke="white" stroke-width="3.2" stroke-opacity="0.5" stroke-linecap="round" stroke-dasharray="4,8"/>
     <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="4,8" stroke-width="1.8"/>
@@ -64,7 +64,7 @@
       ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated'
       and not ([tunnel] = 'yes') 
       and ([sac_scale]='demanding_alpine_hiking' or [sac_scale]='difficult_alpine_hiking') 
-      and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='no')
+      and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
     </Filter>
     <LineSymbolizer stroke="white" stroke-width="3.2" stroke-opacity="0.5" stroke-linecap="round" stroke-dasharray="1,6"/>
     <LineSymbolizer stroke-linejoin="round" stroke-opacity="0.5" stroke="#f12b2b" stroke-linecap="round" stroke-dasharray="1,6" stroke-width="1.8"/>
@@ -75,7 +75,7 @@
     <Filter>
       ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated'
       and ([sac_scale]='hiking' or [sac_scale]='mountain_hiking' or [sac_scale] is null) 
-      and ([trail_visibility]='intermediate' or [trail_visibility]='bad' or [trail_visibility]='no')
+      and ([trail_visibility]='intermediate' or [trail_visibility]='horrible' or [trail_visibility]='bad' or [trail_visibility]='no')
     </Filter>
     <LineSymbolizer stroke="white" stroke-width="3.2" stroke-opacity="0.5" stroke-linecap="round"/>
     <LineSymbolizer stroke-linejoin="round" stroke="#f12b2b" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.5"/>
