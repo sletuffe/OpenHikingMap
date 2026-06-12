@@ -84,9 +84,15 @@
   <Rule>
     &maxscale_zoom16;
     <Filter>
-      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated' 
+      ( [highway] = 'path' or [highway] = 'footway' ) and not [bicycle] = 'designated'
       and [sac_grade] != null
     </Filter>
     <TextSymbolizer fontset-name="sans-condensed" size="9" fill="#f12b2b" halo-radius="1.5" halo-fill="rgba(255,255,255,0.7)" placement="line" spacing="400" repeat-distance="100" dy="4" opacity="0.9">[sac_grade]</TextSymbolizer>
+  </Rule>
+
+  <Rule>
+    &maxscale_zoom13;
+    <Filter>( [highway] = 'path' or [highway] = 'footway' ) and [access] = 'no'</Filter>
+    <TextSymbolizer fontset-name="sans-condensed" size="13" fill="#f12b2b" opacity="0.85" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
   </Rule>
 </Style>
