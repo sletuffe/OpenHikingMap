@@ -16,12 +16,7 @@ grade5 = "unimproved track lacking hard materials" is supposed, in absence of sm
     &minscale_zoom13;
     <TextSymbolizer fontset-name="sans-condensed" size="12" fill="#8B4513" opacity="0.85" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
   </Rule>
-  <Rule>
-    <Filter>[highway] = 'track' and ([access] = 'no' or [access] = 'private')</Filter>
-    &maxscale_zoom13;
-    &minscale_zoom13;
-    <TextSymbolizer fontset-name="sans-condensed" size="12" fill="#8B4513" opacity="0.85" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
-  </Rule>
+
   <Rule>
     &maxscale_zoom14; &minscale_zoom15;
     <Filter>[highway] = 'track' and ([surface] = 'asphalt' or [surface] = 'paved' or [surface] = 'concrete' or [surface] = 'paving_stones' or [smoothness] = 'excellent' or [smoothness] = 'good' or ([smoothness] = null and [tracktype] = 'grade1'))</Filter>
