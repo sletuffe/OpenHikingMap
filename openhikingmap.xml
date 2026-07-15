@@ -63,6 +63,7 @@
 	<!ENTITY symbols-stations SYSTEM "styles/symbols-stations.xml">
 	<!ENTITY text-natural-areas-lowzoom SYSTEM "styles/text-natural-areas-lowzoom.xml">
 	<!ENTITY text-natural-areas-highzoom SYSTEM "styles/text-natural-areas-highzoom.xml">
+	<!ENTITY text-forest SYSTEM "styles/text-forest.xml">
   <!ENTITY text-water-lowzoom SYSTEM "styles/text-water-lowzoom.xml">
 	<!ENTITY text-glacier-lowzoom SYSTEM "styles/text-glacier-lowzoom.xml">
 	<!ENTITY protected_areas SYSTEM "styles/protected_areas.xml">
@@ -146,6 +147,7 @@
 	&symbols-stations;
 	&text-natural-areas-lowzoom;
 	&text-natural-areas-highzoom;
+	&text-forest;
   &text-water-lowzoom;
 	&text-glacier-lowzoom;
   &symbols-peaks;
@@ -565,6 +567,14 @@
 	 <StyleName>text-natural-areas-highzoom</StyleName>
 	 <Datasource>
 	   <Parameter name="table">(SELECT way,name,areatype,way_area,nextregionsize,subregionsize FROM naturalarealabels) AS naturallabels </Parameter>
+	   &postgis-settings;
+	 </Datasource>
+	</Layer>
+
+	<Layer name="text-forest">
+	 <StyleName>text-forest</StyleName>
+	 <Datasource>
+	   <Parameter name="table">(SELECT ST_PointOnSurface(way) AS way,name,way_area::real FROM planet_osm_polygon WHERE (landuse = 'forest' OR "natural" = 'wood') AND name IS NOT NULL AND way &amp;&amp; !bbox!) AS forestlabels </Parameter>
 	   &postgis-settings;
 	 </Datasource>
 	</Layer>

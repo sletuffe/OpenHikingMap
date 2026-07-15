@@ -1,0 +1,25 @@
+<Style name="text-forest">
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom14;
+		<Filter>[way_area] &gt; 1e5</Filter>
+		<TextSymbolizer size="10" fontset-name="sans-oblique" fill="#3a6818" halo-radius="1.5" halo-fill="rgba(255,255,255,0.75)" placement="point" allow-overlap="false">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom15;
+		<Filter>[way_area] &gt; 2e4</Filter>
+		<TextSymbolizer size="10" fontset-name="sans-oblique" fill="#3a6818" halo-radius="1.5" halo-fill="rgba(255,255,255,0.75)" placement="point" allow-overlap="false">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom16;
+		&minscale_zoom16;
+		<Filter>[way_area] &gt; 5e3</Filter>
+		<TextSymbolizer size="10" fontset-name="sans-oblique" fill="#3a6818" halo-radius="1.5" halo-fill="rgba(255,255,255,0.75)" placement="point" allow-overlap="false">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom17;
+		&minscale_zoom18;
+		<TextSymbolizer size="10" fontset-name="sans-oblique" fill="#3a6818" halo-radius="1.5" halo-fill="rgba(255,255,255,0.75)" placement="point" allow-overlap="false">[name]</TextSymbolizer>
+	</Rule>
+</Style>
