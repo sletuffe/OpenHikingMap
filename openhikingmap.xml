@@ -40,6 +40,7 @@
   <!ENTITY path-in-mountain SYSTEM "styles/path-in-mountain.xml">
   <!ENTITY cycleways SYSTEM "styles/cycleways.xml">
   <!ENTITY roads-fill SYSTEM "styles/roads-fill.xml">
+  <!ENTITY roads-access-cross SYSTEM "styles/roads-access-cross.xml">
 	<!ENTITY trams SYSTEM "styles/trams.xml">
 	<!ENTITY housenumbers-poly SYSTEM "styles/housenumbers-poly.xml">
 	<!ENTITY housenumbers-point SYSTEM "styles/housenumbers-point.xml">
@@ -124,6 +125,7 @@
   &path-in-mountain;
   &cycleways;
   &roads-fill;
+  &roads-access-cross;
 	&trams;
 	&railway-points;
 	&symbols-road;
@@ -367,6 +369,7 @@
     <StyleName>tracks</StyleName>
     <StyleName>roads-fill</StyleName>
 		<StyleName>trams</StyleName>
+		<StyleName>roads-access-cross</StyleName>
 		<Datasource>
       <Parameter name="table">(SELECT way,ST_Length(way) AS length,highway,construction,name,sac_scale,
         CASE 

@@ -1,0 +1,26 @@
+<Style name="roads-access-cross">
+	<Rule>
+		&maxscale_zoom14;
+		&minscale_zoom14;
+		<Filter>([highway] = 'unclassified' or [highway] = 'service' or [highway] = 'residential') and ([access] = 'no' or [access] = 'private')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" opacity="0.85" halo-fill="white" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom15;
+		<Filter>([highway] = 'unclassified' or [highway] = 'service' or [highway] = 'residential') and ([access] = 'no' or [access] = 'private')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" opacity="0.85" halo-fill="white" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom16;
+		&minscale_zoom16;
+		<Filter>([highway] = 'unclassified' or [highway] = 'service' or [highway] = 'residential') and ([access] = 'no' or [access] = 'private')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" opacity="0.85" halo-fill="white" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom17;
+		&minscale_zoom18;
+		<Filter>([highway] = 'unclassified' or [highway] = 'service' or [highway] = 'residential') and ([access] = 'no' or [access] = 'private')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="12" fill="black" opacity="0.85" halo-fill="white" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
+	</Rule>
+</Style>
