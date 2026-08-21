@@ -92,7 +92,7 @@
 
   <Rule>
     &maxscale_zoom13;
-    <Filter>( [highway] = 'path' or [highway] = 'footway' ) and [access] = 'no'</Filter>
+    <Filter>( [highway] = 'path' or [highway] = 'footway' ) and [access] = 'no' and not [foot] = 'yes'</Filter>
     <TextSymbolizer fontset-name="sans-condensed" size="13" fill="#f12b2b" opacity="0.85" halo-fill="#FFFFFF66" halo-radius="1.5" placement="line" spacing="100">"✕"</TextSymbolizer>
   </Rule>
 </Style>
