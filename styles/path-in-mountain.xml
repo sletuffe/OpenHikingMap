@@ -87,7 +87,7 @@
       [highway] = 'footway' or ([highway] = 'path' and not [bicycle] = 'designated')
       and [sac_grade] != null
     </Filter>
-    <TextSymbolizer fontset-name="sans-condensed" size="9" fill="#f12b2b" halo-radius="1.5" halo-fill="rgba(255,255,255,0.7)" placement="line" spacing="400" repeat-distance="100" dy="4" opacity="0.9">[sac_grade]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-condensed" size="11" fill="#f12b2b" halo-radius="1.5" halo-fill="white" placement="line" spacing="400" repeat-distance="100" dy="4" opacity="1">[sac_grade]</TextSymbolizer>
   </Rule>
 
   <Rule>
