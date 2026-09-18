@@ -10,6 +10,8 @@ You can get the one I'm using here : https://openmaps.fr/download
 
 But of course you can build your own colored or not & shaded or not relief
 
+These files belong in the `mapnik-data/` directory referenced by `openhikingmap.xml`. This directory is **not tracked by git** (see `.gitignore`) — heavy GeoTIFF/shapefile data doesn't belong in a git history. After cloning, create it yourself (a real directory populated with the files above, or a symlink to wherever you keep that data). On the production server it is a symlink to `/home/big-data/mapnik-data/`, shared with the OpenTopoMap style.
+
 == water polygons ==
 
 Source & more accurate polygons are here :
