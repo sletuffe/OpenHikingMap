@@ -1,3 +1,4 @@
+<!-- KHMER-SPACING: rules duplicated by scripts/khmer_spacing.py -->
 <Style name="text-villages">
 <!-- zoom 11 -->
 	<Rule>
@@ -100,14 +101,26 @@
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<Filter>(([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and ([population] &gt; 1000)</Filter>
+		<Filter>((([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and ([population] &gt; 1000)) and not [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
 		<TextSymbolizer fontset-name="sans-extralight" size="20" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,1)" character-spacing="10" wrap-width="100" placement="point">[name]</TextSymbolizer>
+	</Rule>
+<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>((([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and ([population] &gt; 1000)) and [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-extralight" size="20" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,1)" character-spacing="0" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom18;
-		<Filter>(([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and not ([population] &gt; 1000)</Filter>
+		<Filter>((([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and not ([population] &gt; 1000)) and not [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
 		<TextSymbolizer fontset-name="sans-extralight" size="18" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,1)" character-spacing="10" wrap-width="100" placement="point">[name]</TextSymbolizer>
+	</Rule>
+<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom18;
+		<Filter>((([place] = 'village') or ([place] = 'suburb') or ([place] = 'neighbourhood')) and not ([population] &gt; 1000)) and [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-extralight" size="18" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,1)" character-spacing="0" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 
 	<Rule>

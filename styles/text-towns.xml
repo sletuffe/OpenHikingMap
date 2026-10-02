@@ -1,3 +1,4 @@
+<!-- KHMER-SPACING: rules duplicated by scripts/khmer_spacing.py -->
 <Style name="text-towns">
 
 	<!-- zoom 11 -->
@@ -123,19 +124,37 @@
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom15;
-		<Filter>([place] = 'town') and ([population] &gt; 50000)</Filter>
+		<Filter>(([place] = 'town') and ([population] &gt; 50000)) and not [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
 		<TextSymbolizer fontset-name="sans-condensed" size="33" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="15" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
-	<Rule>
+<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom15;
-		<Filter>([place] = 'town') and ([population] &lt; 50000) and ([population] &gt; 10000)</Filter>
-		<TextSymbolizer fontset-name="sans-condensed" size="30" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="15" wrap-width="100" placement="point">[name]</TextSymbolizer>
+		<Filter>(([place] = 'town') and ([population] &gt; 50000)) and [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="33" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="0" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom15;
-		<Filter>([place] = 'town') and not ([population] &gt; 10000)</Filter>
+		<Filter>(([place] = 'town') and ([population] &lt; 50000) and ([population] &gt; 10000)) and not [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="30" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="15" wrap-width="100" placement="point">[name]</TextSymbolizer>
+	</Rule>
+<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom15;
+		<Filter>(([place] = 'town') and ([population] &lt; 50000) and ([population] &gt; 10000)) and [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="30" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="0" wrap-width="100" placement="point">[name]</TextSymbolizer>
+	</Rule>
+	<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom15;
+		<Filter>(([place] = 'town') and not ([population] &gt; 10000)) and not [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
 		<TextSymbolizer fontset-name="sans-condensed" size="25" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="10" wrap-width="100" placement="point">[name]</TextSymbolizer>
+	</Rule>
+<Rule>
+		&maxscale_zoom15;
+		&minscale_zoom15;
+		<Filter>(([place] = 'town') and not ([population] &gt; 10000)) and [name].match('.*[\x{1780}-\x{17FF}].*')</Filter>
+		<TextSymbolizer fontset-name="sans-condensed" size="25" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" character-spacing="0" wrap-width="100" placement="point">[name]</TextSymbolizer>
 	</Rule>
 </Style>
