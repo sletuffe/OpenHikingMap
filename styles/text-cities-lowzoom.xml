@@ -4,7 +4,7 @@
 		&minscale_zoom3;
 		<Filter>([capital] = 'yes' and [admin_level] = '2' and [population] &gt; 500E3)</Filter>
 		<PointSymbolizer file="symbols/city_small2.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="0" dy="4" />
 			<Placement dx="4" dy="-3" />
 			<Placement dx="4" dy="3" />
@@ -16,7 +16,7 @@
 		&minscale_zoom4;
 		<Filter>([capital] = 'yes' and [admin_level] = '2' and [population] &gt; 200E3)</Filter>
 		<PointSymbolizer file="symbols/city_small2.png"/>
-		<TextSymbolizer fontset-name="sans-condensed-bold" size="10" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed-bold" size="11" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="0" dy="4" />
 			<Placement dx="4" dy="-3" />
 			<Placement dx="4" dy="3" />
@@ -96,7 +96,7 @@
 		&minscale_zoom4;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ([population] &gt; 1E6)</Filter>
 		<PointSymbolizer file="symbols/city_small2.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="1" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="0" dy="4" />
 			<Placement dx="4" dy="-3" />
 			<Placement dx="4" dy="3" />
@@ -108,7 +108,7 @@
 		&minscale_zoom5;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ([population] &gt; 1E6)</Filter>
 		<PointSymbolizer file="symbols/city_small.png"/>
-		<TextSymbolizer fontset-name="sans-condensed-bold" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed-bold" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -120,7 +120,7 @@
 		&minscale_zoom5;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ([population] &lt; 1E6) and ([population] &gt; 250E3)</Filter>
 		<PointSymbolizer file="symbols/town_z8.png" />
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -137,7 +137,7 @@
 		&minscale_zoom6;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ([population] &gt; 1E6)</Filter>
 		<PointSymbolizer file="symbols/city_small.png"/>
-		<TextSymbolizer fontset-name="sans-condensed-bold" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed-bold" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -151,7 +151,7 @@
 		&minscale_zoom6;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ([population] &lt; 1E6) and ([population] &gt; 400E3)</Filter>
 		<PointSymbolizer file="symbols/town_z8.png" />
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -165,7 +165,7 @@
 		&minscale_zoom6;
 		<Filter>(([place] = 'city') and not ([capital] = 'yes')) and ((([population] &lt; 400E3) and ([population] &gt; 100E3)) or [population] = null)</Filter>
 		<PointSymbolizer file="symbols/town_z8.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="9" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="100" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -272,7 +272,7 @@
 		&minscale_zoom7;
 		<Filter>([place] = 'town') and ([population] &gt; 50000)</Filter>
 		<PointSymbolizer file="symbols/town_z8.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="9" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="70" wrap-before="true" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="70" wrap-before="true" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -287,7 +287,7 @@
 		&minscale_zoom8;
 		<Filter>([place] = 'town') and ([population] &gt; 25000)</Filter>
 		<PointSymbolizer file="symbols/town_z8.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />
@@ -315,7 +315,7 @@
 		&minscale_zoom9;
 		<Filter>([place] = 'town') and ([population] &lt; 50000) and ([population] &gt; 10000)</Filter>
 		<PointSymbolizer file="symbols/town.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="80" wrap-before="true" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="80" wrap-before="true" placement="point" placement-type="list">[name]
 			<Placement dx="5" dy="-3" />
             <Placement dx="0" dy="5" />
 			<Placement dx="4" dy="3" />
@@ -356,7 +356,7 @@
 		&minscale_zoom10;
 		<Filter>([place] = 'town') and ([population] &lt; 10000) and ([population] &gt; 5000)</Filter>
 		<PointSymbolizer file="symbols/small_town.png"/>
-		<TextSymbolizer fontset-name="sans-condensed" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
+		<TextSymbolizer fontset-name="sans-condensed" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" wrap-width="75" wrap-before="true" placement="point" placement-type="list">[name]
 			<Placement dx="4" dy="-3" />
 			<Placement dx="0" dy="5" />
 			<Placement dx="5" dy="3" />

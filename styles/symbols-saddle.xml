@@ -4,7 +4,7 @@
 		&minscale_zoom14;
 		<Filter>[natural] = 'saddle' or [natural] = 'col' or [natural] = 'notch' or [mountain_pass] = 'yes'</Filter>
 		<PointSymbolizer file="symbols/saddle-10.svg"/>
-    <TextSymbolizer fontset-name="sans-oblique" size="10" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="10" wrap-width="100">[name]+"\n"+[ele]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-oblique" size="11" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="10" wrap-width="100">[name]+"\n"+[ele]</TextSymbolizer>
   </Rule>
 
 	<Rule>
@@ -12,6 +12,6 @@
 		&minscale_zoom18;
 		<Filter>[natural] = 'saddle'or [natural] = 'col' or [natural] = 'notch' or [mountain_pass] = 'yes'</Filter>
         <PointSymbolizer file="symbols/saddle-15.svg"/>
-        <TextSymbolizer fontset-name="sans-oblique" size="10" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="12" wrap-width="100">[name]+"\n"+[ele]</TextSymbolizer>
+        <TextSymbolizer fontset-name="sans-oblique" size="11" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="12" wrap-width="100">[name]+"\n"+[ele]</TextSymbolizer>
       </Rule>
 </Style>

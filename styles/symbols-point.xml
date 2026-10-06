@@ -34,7 +34,7 @@
       stroke-width="0" />
     <TextSymbolizer 
       fontset-name="sans-oblique" 
-      size="8" 
+      size="10" 
       fill="#4a6121" 
       halo-radius="1" 
       halo-fill="rgba(255,255,255,0.6)" 
@@ -46,7 +46,7 @@
     &maxscale_zoom16;
     <Filter>[tourism]='information' and [information]='guidepost'</Filter>
     <PointSymbolizer file="symbols/tourism/guidepost.png"/>
-    <TextSymbolizer size="10" fill="#000" dy="12" fontset-name="sans-oblique" halo-radius="1">[ele]</TextSymbolizer>
+    <TextSymbolizer size="11" fill="#000" dy="12" fontset-name="sans-oblique" halo-radius="1">[ele]</TextSymbolizer>
   </Rule>
   <Rule>
     &maxscale_zoom16;
@@ -66,6 +66,6 @@
   <Rule>
     &maxscale_zoom16; &minscale_zoom18;
     <Filter>([natural] = 'cave_entrance')</Filter>
-    <TextSymbolizer fontset-name="sans-oblique" size="10" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.7)" placement="point" dy="11" wrap-width="100" wrap-before="true">[name]</TextSymbolizer>
+    <TextSymbolizer fontset-name="sans-oblique" size="11" fill="black" halo-radius="2" halo-fill="rgba(255,255,255,0.7)" placement="point" dy="11" wrap-width="100" wrap-before="true">[name]</TextSymbolizer>
   </Rule>
 </Style>
